@@ -1,0 +1,1119 @@
+
+/* =====================================================
+   VISHAL KUMAR PORTFOLIO
+   GLOBAL DESIGN SYSTEM
+   HOME THEME | DESKTOP | TABLET | MOBILE
+===================================================== */
+
+
+/* =====================================================
+   1. GLOBAL DESIGN VARIABLES
+===================================================== */
+
+:root {
+  --v-purple: #a855f7;
+  --v-purple-light: #c084fc;
+  --v-pink: #ec4899;
+
+  --v-text: #f8f7fc;
+  --v-muted: #9993a5;
+
+  --bg-primary: #09090b;
+  --bg-secondary: #0d0b12;
+  --bg-card: #15111e;
+
+  --border: rgba(255, 255, 255, 0.08);
+
+  --gradient: linear-gradient(
+    105deg,
+    #9b4cf3 0%,
+    #d35bbf 48%,
+    #f04f75 100%
+  );
+
+  --container: 1200px;
+}
+
+
+/* =====================================================
+   2. GLOBAL RESET
+===================================================== */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  width: 100%;
+  min-width: 320px;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+
+  scroll-behavior: smooth;
+  scroll-padding-top: 85px;
+
+  background: var(--bg-primary);
+  color-scheme: dark;
+}
+
+body {
+  width: 100%;
+  min-width: 320px;
+  min-height: 100vh;
+  min-height: 100dvh;
+
+  margin: 0;
+  padding: 0;
+
+  overflow-x: hidden;
+
+  background: var(--bg-primary);
+  color: var(--v-text);
+
+  font-family: Inter, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  width: 100% !important;
+  max-width: none !important;
+  min-height: 100vh;
+  min-height: 100dvh;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  overflow-x: clip;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+button {
+  cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  overflow-wrap: break-word;
+}
+
+::selection {
+  background: var(--v-purple);
+  color: white;
+}
+
+:focus-visible {
+  outline: 2px solid #c084fc;
+  outline-offset: 3px;
+}
+
+
+/* =====================================================
+   3. HOME PAGE
+   ORIGINAL HOME DESIGN PRESERVED
+===================================================== */
+
+.v-home {
+  --v-purple: #a855f7;
+  --v-pink: #ec4899;
+  --v-text: #f8f7fc;
+  --v-muted: #9993a5;
+
+  position: relative;
+
+  width: 100%;
+  min-height: 100vh;
+  min-height: 100svh;
+
+  overflow: hidden;
+  isolation: isolate;
+
+  color: var(--v-text);
+  background: #09090b;
+
+  font-family: Inter, Arial, sans-serif;
+}
+
+
+/* HOME BACKGROUND LIGHTING */
+
+.v-background {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.v-glow {
+  position: absolute;
+
+  width: 450px;
+  height: 350px;
+
+  border-radius: 50%;
+
+  filter: blur(110px);
+  opacity: 0.19;
+}
+
+.v-glow-purple {
+  top: 18%;
+  left: 22%;
+
+  background: #8b5cf6;
+}
+
+.v-glow-pink {
+  top: 23%;
+  right: 18%;
+
+  background: #e11d48;
+  opacity: 0.12;
+}
+
+
+/* HOME HERO */
+
+.v-hero {
+  position: relative;
+
+  width: 100%;
+  min-height: 100vh;
+  min-height: 100svh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding: 80px 25px 75px;
+}
+
+.v-hero-content {
+  width: 100%;
+  max-width: 850px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin: auto;
+  text-align: center;
+}
+
+
+/* AVAILABILITY */
+
+.v-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+
+  margin-bottom: 25px;
+
+  color: #c8c1d2;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+}
+
+.v-status-dot {
+  width: 7px;
+  height: 7px;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  background: #34d399;
+  box-shadow: 0 0 12px rgba(52, 211, 153, 0.65);
+}
+
+
+/* MAIN HEADING */
+
+.v-heading {
+  margin: 0;
+
+  font-size: clamp(58px, 8vw, 86px);
+  font-weight: 850;
+  line-height: 1.08;
+  letter-spacing: -4.5px;
+}
+
+.v-heading-gradient {
+  background: var(--gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+/* PROFESSION */
+
+.v-profession {
+  margin-top: 10px;
+
+  color: #f8f7fc;
+
+  font-size: clamp(27px, 4vw, 43px);
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: -1.5px;
+}
+
+
+/* DESCRIPTION */
+
+.v-description {
+  width: 100%;
+  max-width: 590px;
+
+  margin-top: 17px;
+
+  color: var(--v-muted);
+
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.9;
+  letter-spacing: 0.1px;
+}
+
+
+/* HERO BUTTONS */
+
+.v-hero-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+
+  margin-top: 26px;
+}
+
+.v-primary-btn,
+.v-secondary-btn {
+  min-width: 145px;
+  min-height: 43px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+
+  padding: 0 19px;
+
+  border-radius: 9px;
+
+  font-size: 11px;
+  font-weight: 600;
+
+  white-space: nowrap;
+  transition: all 0.3s ease;
+}
+
+
+/* PRIMARY BUTTON */
+
+.v-primary-btn {
+  color: white;
+
+  background: linear-gradient(
+    110deg,
+    #9333ea,
+    #a855f7
+  );
+
+  box-shadow: 0 5px 22px rgba(168, 85, 247, 0.18);
+}
+
+.v-primary-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 9px 28px rgba(168, 85, 247, 0.38);
+}
+
+.v-primary-btn svg {
+  transition: transform 0.3s ease;
+}
+
+.v-primary-btn:hover svg {
+  transform: translateX(4px);
+}
+
+
+/* SECONDARY BUTTON */
+
+.v-secondary-btn {
+  color: #e9d5ff;
+
+  border: 1px solid rgba(168, 85, 247, 0.65);
+  background: rgba(168, 85, 247, 0.08);
+}
+
+.v-secondary-btn:hover {
+  background: rgba(168, 85, 247, 0.2);
+  border-color: #c084fc;
+  transform: translateY(-3px);
+}
+
+
+/* SCROLL INDICATOR */
+
+.v-scroll-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  margin-top: 36px;
+  padding: 9px 15px;
+
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 30px;
+
+  background: rgba(0, 0, 0, 0.25);
+
+  color: #9993a5;
+  font-size: 10px;
+
+  transition: 0.3s ease;
+}
+
+.v-scroll-link:hover {
+  color: #d8b4fe;
+  border-color: rgba(168, 85, 247, 0.45);
+  transform: translateY(3px);
+}
+
+.v-scroll-link svg {
+  color: #c084fc;
+}
+
+
+/* HOME FOOTER */
+
+.v-footer {
+  position: absolute;
+
+  bottom: 0;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  width: min(1200px, calc(100% - 60px));
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 16px 0;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+
+  color: #77717f;
+  font-size: 10px;
+}
+
+
+/* FEATURED WORK */
+
+.v-featured-anchor {
+  min-height: 330px;
+
+  padding: 80px 25px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #0d0b12;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.v-featured-anchor > div {
+  width: 100%;
+  max-width: 850px;
+}
+
+.v-featured-anchor > div > span {
+  color: #c084fc;
+  font-size: 10px;
+  letter-spacing: 2px;
+}
+
+.v-featured-anchor h2 {
+  margin-top: 16px;
+  font-size: clamp(27px, 4vw, 42px);
+  letter-spacing: -1.5px;
+}
+
+.v-featured-anchor p {
+  margin-top: 12px;
+  color: #9993a5;
+  font-size: 13px;
+}
+
+.v-featured-anchor a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  margin-top: 24px;
+
+  color: #c084fc;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+
+/* =====================================================
+   4. GLOBAL PAGE BACKGROUND
+   SAME PURPLE-PINK LIGHTING AS HOME PAGE
+===================================================== */
+
+.about-page,
+.skills-page,
+.projects-page,
+.experience-page,
+.education-page,
+.certifications-page,
+.contact-page {
+  position: relative;
+
+  width: 100%;
+  max-width: none;
+  min-width: 0;
+  min-height: 100vh;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  overflow-x: clip;
+  isolation: isolate;
+
+  color: #f8f7fc;
+
+  background-color: #09090b;
+
+  background-image:
+    radial-gradient(
+      ellipse 450px 350px at 22% 18%,
+      rgba(139, 92, 246, 0.19),
+      transparent 75%
+    ),
+    radial-gradient(
+      ellipse 450px 350px at 82% 25%,
+      rgba(225, 29, 72, 0.12),
+      transparent 75%
+    );
+}
+
+/* Preserve page-specific background lighting */
+.v-home {
+  background: #09090b;
+}
+
+/* Ensure page content remains above background */
+.about-page > *,
+.skills-page > *,
+.projects-page > *,
+.experience-page > *,
+.education-page > *,
+.certifications-page > *,
+.contact-page > * {
+  position: relative;
+}
+
+
+/* =====================================================
+   5. GLOBAL PAGE HEADING
+===================================================== */
+
+.skills-heading h1 span,
+.certifications-header h1 span {
+  background: var(--gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.skills-eyebrow,
+.certifications-eyebrow {
+  color: #c084fc;
+}
+
+
+/* =====================================================
+   6. GLOBAL CARD COLOUR SYSTEM
+===================================================== */
+
+.skills-card,
+.education-card,
+.certification-card,
+.contact-card,
+.project-card {
+  background: linear-gradient(
+    145deg,
+    rgba(29, 20, 40, 0.88),
+    rgba(13, 11, 20, 0.96)
+  );
+
+  border-color: rgba(168, 85, 247, 0.25);
+}
+
+.skills-card:hover,
+.education-card:hover,
+.certification-card:hover,
+.contact-card:hover,
+.project-card:hover {
+  border-color: rgba(192, 132, 252, 0.65);
+
+  box-shadow:
+    0 12px 35px rgba(168, 85, 247, 0.12);
+}
+
+
+/* =====================================================
+   7. GLOBAL ACCENT COLOURS
+===================================================== */
+
+.skills-card-subtitle,
+.skills-card-footer,
+.certification-category {
+  color: #c084fc;
+}
+
+.skills-card-icon,
+.skills-timeline-dot {
+  color: #d8a4ff;
+}
+
+.skills-tags span {
+  border-color: rgba(168, 85, 247, 0.25);
+}
+
+
+/* =====================================================
+   8. REMOVE DECORATIVE BACKGROUND GRID
+   DOES NOT REMOVE CSS GRID CARD LAYOUTS
+===================================================== */
+
+.skills-background-grid,
+.skills-grid-pattern,
+.certifications-grid,
+.contact-bg-grid,
+.skills-bg-grid,
+.projects-bg-grid,
+.education-bg-grid,
+.home-bg-grid,
+.v-grid,
+.grid-background,
+.background-grid,
+.global-grid,
+.grid-overlay,
+.background-grid-overlay,
+.global-grid-overlay,
+.bg-grid,
+.grid-pattern {
+  display: none !important;
+  background-image: none !important;
+}
+
+
+/* =====================================================
+   9. TABLET RESPONSIVE
+===================================================== */
+
+@media (max-width: 900px) {
+  .v-heading {
+    font-size: clamp(55px, 8vw, 72px);
+  }
+
+  .v-profession {
+    font-size: clamp(25px, 4vw, 34px);
+  }
+
+  .v-hero-content {
+    max-width: 700px;
+  }
+}
+
+
+/* =====================================================
+   10. MOBILE RESPONSIVE
+===================================================== */
+
+@media (max-width: 700px) {
+  .v-hero {
+    min-height: 100svh;
+    padding: 65px 20px 85px;
+  }
+
+  .v-hero-content {
+    max-width: 550px;
+  }
+
+  .v-eyebrow {
+    margin-bottom: 21px;
+    font-size: 10px;
+  }
+
+  .v-heading {
+    font-size: clamp(44px, 10vw, 65px);
+    letter-spacing: -2.5px;
+    line-height: 1.12;
+  }
+
+  .v-profession {
+    margin-top: 12px;
+    font-size: clamp(23px, 5vw, 32px);
+    letter-spacing: -1px;
+  }
+
+  .v-description {
+    max-width: 470px;
+    margin-top: 15px;
+    font-size: 12px;
+    line-height: 1.85;
+  }
+
+  .v-hero-buttons {
+    flex-wrap: wrap;
+    margin-top: 24px;
+    gap: 10px;
+  }
+
+  .v-primary-btn,
+  .v-secondary-btn {
+    min-width: 130px;
+    min-height: 44px;
+    padding: 0 13px;
+    font-size: 10px;
+  }
+
+  .v-scroll-link {
+    margin-top: 30px;
+  }
+
+  .v-footer {
+    width: calc(100% - 36px);
+    font-size: 9px;
+  }
+
+  .v-featured-anchor {
+    min-height: 280px;
+    padding: 60px 24px;
+  }
+}
+
+
+/* =====================================================
+   11. IPHONE RESPONSIVE
+===================================================== */
+
+@media (max-width: 430px) {
+  .v-hero {
+    padding: 45px 17px 85px;
+  }
+
+  .v-heading {
+    font-size: clamp(40px, 10.3vw, 48px);
+    letter-spacing: -1.8px;
+  }
+
+  .v-profession {
+    font-size: clamp(22px, 5.8vw, 26px);
+  }
+
+  .v-description {
+    font-size: 11px;
+  }
+
+  .v-hero-buttons {
+    gap: 9px;
+  }
+
+  .v-primary-btn,
+  .v-secondary-btn {
+    min-width: 0;
+    padding: 0 13px;
+    font-size: 9px;
+  }
+
+  .v-scroll-link {
+    margin-top: 27px;
+  }
+
+  .v-footer {
+    flex-direction: column;
+    justify-content: center;
+    gap: 7px;
+    text-align: center;
+    padding: 12px 0;
+  }
+
+  .v-featured-anchor {
+    padding: 55px 20px;
+  }
+}
+
+
+/* =====================================================
+   12. SMALL PHONES
+===================================================== */
+
+@media (max-width: 360px) {
+  .v-heading {
+    font-size: 37px;
+  }
+
+  .v-profession {
+    font-size: 21px;
+  }
+
+  .v-hero-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .v-primary-btn,
+  .v-secondary-btn {
+    width: 100%;
+  }
+}
+
+
+/* =====================================================
+   13. IPHONE SAFE AREA
+===================================================== */
+
+@supports (padding: env(safe-area-inset-bottom)) {
+  .v-home {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+
+  @media (max-width: 700px) {
+    .v-hero {
+      padding-bottom: max(
+        65px,
+        calc(env(safe-area-inset-bottom) + 35px)
+      );
+    }
+  }
+}
+
+
+/* =====================================================
+   14. REDUCED MOTION
+===================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .v-home *,
+  .v-home *::before,
+  .v-home *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .skills-card,
+  .skills-brand-mark {
+    transition: none !important;
+  }
+}
+
+
+/* =====================================================
+   15. LIGHT THEME SUPPORT
+===================================================== */
+
+:root[data-theme="light"] {
+  color-scheme: light;
+
+  --bg-primary: #faf9fc;
+  --bg-secondary: #f2eef8;
+  --bg-card: #ffffff;
+
+  --v-text: #17121f;
+  --v-muted: #756b80;
+}
+
+:root[data-theme="light"] body {
+  background: var(--bg-primary);
+  color: var(--v-text);
+}
+
+:root[data-theme="light"] .skills-page,
+:root[data-theme="light"] .education-page,
+:root[data-theme="light"] .projects-page,
+:root[data-theme="light"] .certifications-page,
+:root[data-theme="light"] .contact-page {
+  background-color: #faf9fc;
+  color: #17121f;
+}
+
+
+/* =====================================================
+   END OF GLOBAL CSS
+===================================================== */
+
+/* =====================================================
+   GLOBAL PINK + MAGENTA NEON HOVER EFFECT
+   ALL PORTFOLIO SECTIONS
+===================================================== */
+
+:root {
+  --hover-pink: #ec4899;
+  --hover-magenta: #d946ef;
+  --hover-purple: #a855f7;
+
+  --hover-gradient: linear-gradient(
+    120deg,
+    #ec4899,
+    #d946ef,
+    #a855f7
+  );
+}
+
+/* ==========================================
+   GLOBAL CARD HOVER
+========================================== */
+
+.skills-card,
+.project-card,
+.education-card,
+.certification-card,
+.contact-card,
+.experience-card,
+.about-card,
+.skill-card,
+.project-item,
+.education-item,
+.certification-item {
+  position: relative;
+  transform-style: preserve-3d;
+
+  transition:
+    transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1),
+    border-color 0.35s ease,
+    box-shadow 0.4s ease,
+    background 0.35s ease;
+}
+
+/* ==========================================
+   PINK + MAGENTA GLOW ON HOVER
+========================================== */
+
+.skills-card:hover,
+.project-card:hover,
+.education-card:hover,
+.certification-card:hover,
+.contact-card:hover,
+.experience-card:hover,
+.about-card:hover,
+.skill-card:hover,
+.project-item:hover,
+.education-item:hover,
+.certification-item:hover {
+  transform: translateY(-7px) rotateX(1deg) rotateY(-1deg);
+
+  border-color: rgba(236, 72, 153, 0.85) !important;
+
+  box-shadow:
+    0 0 12px rgba(236, 72, 153, 0.20),
+    0 0 28px rgba(217, 70, 239, 0.17),
+    0 12px 35px rgba(168, 85, 247, 0.16),
+    inset 0 0 22px rgba(217, 70, 239, 0.07);
+}
+
+/* ==========================================
+   CARD LIGHT REFLECTION
+========================================== */
+
+.skills-card::before,
+.project-card::before,
+.education-card::before,
+.certification-card::before,
+.contact-card::before,
+.experience-card::before,
+.about-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  border-radius: inherit;
+
+  background: linear-gradient(
+    125deg,
+    rgba(236, 72, 153, 0.10),
+    transparent 38%,
+    rgba(217, 70, 239, 0.09)
+  );
+
+  opacity: 0;
+  pointer-events: none;
+
+  transition: opacity 0.4s ease;
+}
+
+.skills-card:hover::before,
+.project-card:hover::before,
+.education-card:hover::before,
+.certification-card:hover::before,
+.contact-card:hover::before,
+.experience-card:hover::before,
+.about-card:hover::before {
+  opacity: 1;
+}
+
+/* ==========================================
+   ICON GLOW
+========================================== */
+
+.skills-card:hover .skills-card-icon,
+.project-card:hover .project-icon,
+.education-card:hover .education-icon,
+.certification-card:hover .certification-icon {
+  color: #f0abfc;
+
+  border-color: #ec4899;
+
+  box-shadow:
+    0 0 12px rgba(236, 72, 153, 0.35),
+    0 0 25px rgba(217, 70, 239, 0.20);
+
+  transition: all 0.35s ease;
+}
+
+/* ==========================================
+   TEXT ACCENT ON HOVER
+========================================== */
+
+.skills-card:hover h2,
+.project-card:hover h2,
+.education-card:hover h2,
+.certification-card:hover h3 {
+  color: #f0abfc;
+
+  transition: color 0.3s ease;
+}
+
+/* ==========================================
+   SKILL TAG HOVER
+========================================== */
+
+.skills-tags span:hover,
+.skills-tag:hover {
+  color: #ffffff;
+
+  border-color: #ec4899;
+
+  background: linear-gradient(
+    120deg,
+    rgba(236, 72, 153, 0.20),
+    rgba(217, 70, 239, 0.18)
+  );
+
+  box-shadow:
+    0 0 12px rgba(236, 72, 153, 0.18);
+
+  transform: translateY(-2px);
+}
+
+/* ==========================================
+   BUTTON HOVER - PINK MAGENTA
+========================================== */
+
+.v-primary-btn:hover,
+.v-secondary-btn:hover,
+button:hover,
+.navbar-cta:hover {
+  border-color: #ec4899;
+}
+
+.v-primary-btn:hover {
+  background: linear-gradient(
+    110deg,
+    #d946ef,
+    #ec4899
+  );
+
+  box-shadow:
+    0 0 18px rgba(236, 72, 153, 0.35),
+    0 0 35px rgba(217, 70, 239, 0.20);
+}
+
+.v-secondary-btn:hover {
+  color: #ffffff;
+
+  background: linear-gradient(
+    110deg,
+    rgba(217, 70, 239, 0.18),
+    rgba(236, 72, 153, 0.18)
+  );
+
+  box-shadow: 0 0 18px rgba(236, 72, 153, 0.20);
+}
+
+/* ==========================================
+   NAVIGATION LINK HOVER
+========================================== */
+
+.navbar-link:hover,
+.navbar-mobile-link:hover {
+  color: #f0abfc;
+  transition: color 0.3s ease;
+}
+
+.navbar-link:hover svg,
+.navbar-mobile-link:hover svg {
+  color: #ec4899;
+}
+
+/* ==========================================
+   REDUCED MOTION
+========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .skills-card,
+  .project-card,
+  .education-card,
+  .certification-card,
+  .contact-card,
+  .experience-card,
+  .about-card {
+    transition: none !important;
+    transform: none !important;
+  }
+}
