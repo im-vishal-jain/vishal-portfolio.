@@ -17,6 +17,7 @@ const skillCategories = [
   {
     id: "01",
     title: "Programming",
+    subtitle: "Languages & Development",
     description:
       "Building applications and solving problems through programming.",
     icon: Code2,
@@ -25,6 +26,7 @@ const skillCategories = [
   {
     id: "02",
     title: "Machine Learning",
+    subtitle: "Intelligent Algorithms",
     description:
       "Developing predictive models and intelligent data-driven solutions.",
     icon: BrainCircuit,
@@ -33,6 +35,7 @@ const skillCategories = [
   {
     id: "03",
     title: "Generative AI",
+    subtitle: "Generative AI Technologies",
     description:
       "Creating AI-powered applications using modern generative technologies.",
     icon: Sparkles,
@@ -41,6 +44,7 @@ const skillCategories = [
   {
     id: "04",
     title: "LLMs",
+    subtitle: "Large Language Models",
     description:
       "Working with large language models and intelligent AI applications.",
     icon: Cpu,
@@ -49,6 +53,7 @@ const skillCategories = [
   {
     id: "05",
     title: "Agentic AI",
+    subtitle: "Autonomous AI Systems",
     description:
       "Building autonomous workflows and multi-agent AI systems.",
     icon: Workflow,
@@ -57,6 +62,7 @@ const skillCategories = [
   {
     id: "06",
     title: "Data Analytics",
+    subtitle: "Data & Business Intelligence",
     description:
       "Transforming raw data into meaningful insights and visualizations.",
     icon: TrendingUp,
@@ -67,7 +73,6 @@ const skillCategories = [
 function Skills() {
   return (
     <main className="skills-page">
-
       {/* BACKGROUND */}
       <div className="skills-background">
         <div className="skills-background-glow skills-glow-one" />
@@ -82,7 +87,6 @@ function Skills() {
       </header>
 
       <section className="skills-showcase">
-
         {/* HEADING */}
         <motion.div
           className="skills-heading"
@@ -107,7 +111,6 @@ function Skills() {
 
         {/* SKILLS TIMELINE */}
         <div className="skills-timeline">
-
           {skillCategories.map((category, index) => {
             const Icon = category.icon;
 
@@ -128,7 +131,6 @@ function Skills() {
                   delay: 0.08,
                 }}
               >
-
                 {/* CENTER TIMELINE ICON */}
                 <div className="skills-timeline-marker">
                   <div className="skills-timeline-dot">
@@ -138,7 +140,6 @@ function Skills() {
 
                 {/* SKILL CARD */}
                 <div className="skills-card">
-
                   <div className="skills-card-art" />
 
                   <div className="skills-card-top">
@@ -179,16 +180,13 @@ function Skills() {
                     <span>Technical Skills</span>
                     <Sparkles size={16} />
                   </div>
-
                 </div>
 
                 {/* EMPTY TIMELINE COLUMN */}
                 <div className="skills-empty-column" />
-
               </motion.article>
             );
           })}
-
         </div>
       </section>
     </main>
