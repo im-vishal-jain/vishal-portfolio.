@@ -8,7 +8,6 @@ import {
   GraduationCap,
   Workflow,
   Layers3,
-  Code2,
   ExternalLink,
 } from "lucide-react";
 
